@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class Hooks {
     String BASE_URL = "https://www.saucedemo.com/";
+    String BASE_URL_ = "https://www.saucedemo.com/";
 
     @Before
     public void setUp(){
