@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         glue = {"steps", "hooks"},
         //tags= "@inventory"
       // tags = "@locked_out_user"
-       tags = "@login"
+      // tags = "@login"
+        tags= "@success_login_with_valid_date"
        // tags ="@invalid_password"
         // tags ="@invalid_username"
        // tags= "@invalid_data"
@@ -19,4 +20,5 @@ import org.junit.runner.RunWith;
        // tags="@sort_price_fromLowToHigh"
 )
 public class RunnerTest {
+
 }

@@ -1,9 +1,11 @@
-@login
-Feature: Login
+@profile
+#Feature: Login
+#  Background:
+#    Given I open Login page
+Feature: Scenario Login
   Background:
-    Given I open Login page
-
-@success_login
+    Given  I open Login pages
+@success_login_with_valid_date
   Scenario: Success login with valid data
     When I input "alexgor@gmx.de" to username field
     And input "Alexgor0!" to password field

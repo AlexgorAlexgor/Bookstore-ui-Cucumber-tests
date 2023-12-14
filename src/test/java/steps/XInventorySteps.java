@@ -20,7 +20,7 @@ import static junit.framework.TestCase.assertEquals;
 
 public class XInventorySteps extends BaseSteps {
 
-    @Then("^I am on the page Inventory$")
+   /* @Then("^I am on the page Inventory$")
     public void iAmOnThePageInventory() {
         XInventoryPage.inventoryList.shouldBe(visible, Duration.ofSeconds(10));
         //Epic sadface: Sorry, this user has been locked out.
@@ -38,10 +38,10 @@ public class XInventorySteps extends BaseSteps {
         XInventoryPage.logoutField.shouldBe(visible, Duration.ofSeconds(10)).click();
     }
 
-/*    @And("^(\\d+) items are displayed$")
+*//*    @And("^(\\d+) items are displayed$")
     public void itemsAreDisplayed(int expectedQuantity) {
         XInventoryPage.inventoryItems.filter(Condition.visible).shouldHave(size(expectedQuantity));
-    }*/
+    }*//*
 
     @And("^I see the (\\d+) items on the page Inventory$")
     public void iSeeTheItemsOnThePageInventory(int expectedQuantity) {
@@ -131,7 +131,7 @@ public class XInventorySteps extends BaseSteps {
 
     @Then("^I open Your_Cart_Link page$")
     public void iOpenYour_Cart_LinkPage() {
-    }
+    }*/
 }
 
   //  assertEquals("Items have NOT sorted alphabetically", actualNames, expectedNames);

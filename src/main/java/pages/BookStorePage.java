@@ -14,7 +14,7 @@ public class BookStorePage {
     public SelenideElement passwordInputField = $(byId("password"));
     public SelenideElement loginButton = $(byId("login-button"));
 
-    public SelenideElement alarmMessageLockedOutUser= $(byText("Sorry, this user has been locked out."));
+    public SelenideElement alarmMessageUserName= $(byText("Sorry, this user has been locked out."));
 
     public SelenideElement alarmMessageInvalidData= $(byText("Username and password do not match any user in this service"));
 */

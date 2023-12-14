@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class XLoginPage {
 
-    public SelenideElement usernameInputField = $(byId("user-name"));
+   // public SelenideElement usernameInputField = $(byId("user-name"));
     public SelenideElement passwordInputField = $(byId("password"));
     public SelenideElement loginButton = $(byId("login-button"));
 

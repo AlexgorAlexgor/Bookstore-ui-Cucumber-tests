@@ -3,9 +3,9 @@ package steps;
 import pages.*;
 
 public class BaseSteps {
-    XLoginPage XLoginPage = new XLoginPage();
+   /* XLoginPage XLoginPage = new XLoginPage();
     XInventoryPage XInventoryPage = new XInventoryPage();
-    XYourCartPage XYourCartPage =new XYourCartPage();
+    XYourCartPage XYourCartPage =new XYourCartPage();*/
 
     BookStorePage bookStorePage =new BookStorePage();
     ProfilePage profilePage =new ProfilePage();
