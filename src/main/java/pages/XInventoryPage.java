@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static org.openqa.selenium.By.cssSelector;
 
-public class InventoryPage {
+public class XInventoryPage {
     public SelenideElement inventoryList = $(byClassName("inventory_list"));
     public SelenideElement h3DataTest = $(By.tagName("h3"));
 

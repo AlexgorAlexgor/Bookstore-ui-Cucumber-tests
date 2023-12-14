@@ -1,14 +1,16 @@
 package steps;
 
-import pages.InventoryPage;
-import pages.LoginPage;
-import pages.YourCartPage;
+import pages.*;
 
 public class BaseSteps {
-    LoginPage loginPage = new LoginPage();
+    XLoginPage XLoginPage = new XLoginPage();
+    XInventoryPage XInventoryPage = new XInventoryPage();
+    XYourCartPage XYourCartPage =new XYourCartPage();
 
-    InventoryPage inventoryPage = new InventoryPage();
-    YourCartPage yourCartPage=new YourCartPage();
+    BookStorePage bookStorePage =new BookStorePage();
+    ProfilePage profilePage =new ProfilePage();
+    LoginForm loginForm=new LoginForm();
+    RegisterForm registerForm=new RegisterForm();
 
    // String BASE_URL = "https://www.saucedemo.com/";
 

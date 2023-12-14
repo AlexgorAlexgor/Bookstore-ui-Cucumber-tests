@@ -18,11 +18,11 @@ import static java.lang.Double.parseDouble;
 import static java.util.Collections.sort;
 import static junit.framework.TestCase.assertEquals;
 
-public class InventorySteps extends BaseSteps {
+public class XInventorySteps extends BaseSteps {
 
     @Then("^I am on the page Inventory$")
     public void iAmOnThePageInventory() {
-        inventoryPage.inventoryList.shouldBe(visible, Duration.ofSeconds(10));
+        XInventoryPage.inventoryList.shouldBe(visible, Duration.ofSeconds(10));
         //Epic sadface: Sorry, this user has been locked out.
     }
 
@@ -34,62 +34,62 @@ public class InventorySteps extends BaseSteps {
 
     @When("^I push the Logout button$")
     public void iPushTheLogoutButton() {
-        inventoryPage.burgerMenu.shouldBe(visible, Duration.ofSeconds(5));
-        inventoryPage.logoutField.shouldBe(visible, Duration.ofSeconds(10)).click();
+        XInventoryPage.burgerMenu.shouldBe(visible, Duration.ofSeconds(5));
+        XInventoryPage.logoutField.shouldBe(visible, Duration.ofSeconds(10)).click();
     }
 
 /*    @And("^(\\d+) items are displayed$")
     public void itemsAreDisplayed(int expectedQuantity) {
-        inventoryPage.inventoryItems.filter(Condition.visible).shouldHave(size(expectedQuantity));
+        XInventoryPage.inventoryItems.filter(Condition.visible).shouldHave(size(expectedQuantity));
     }*/
 
     @And("^I see the (\\d+) items on the page Inventory$")
     public void iSeeTheItemsOnThePageInventory(int expectedQuantity) {
-        inventoryPage.inventoryItems.filter(visible).shouldHave(size(expectedQuantity));
+        XInventoryPage.inventoryItems.filter(visible).shouldHave(size(expectedQuantity));
 
     }
 
     @And("^I push the sort menu by name a-z$")
     public void iPushTheSortMenuByNameAZ() {
-        inventoryPage.sortDropDown.shouldBe(visible);
-        inventoryPage.textAz.click();
+        XInventoryPage.sortDropDown.shouldBe(visible);
+        XInventoryPage.textAz.click();
     }
 
     @Then("^I see the sorted  items on the page$")
     public void iSeeTheSortedItemsOnThePage() {
-        // inventoryPage.sortedItems.texts()
+        // XInventoryPage.sortedItems.texts()
 
     }
  //   assertEquals("Items have NOT sorted alphabetically", actualNames, expectedNames);
 
     @When("^I choose sort option by name A-Z$")
     public void iChooseSortOptionByNameAZ() {
-        inventoryPage.sortDropdown.shouldBe(visible).click();
-        inventoryPage.nameAtoZ.shouldBe(visible).click();
+        XInventoryPage.sortDropdown.shouldBe(visible).click();
+        XInventoryPage.nameAtoZ.shouldBe(visible).click();
     }
 
     @Then("^all items sorted by name alphabetically$")
     public void allItemsSortedByNameAlphabetically() {
         List<String> actualNames = new ArrayList<>();
-        for (SelenideElement itemName : inventoryPage.inventoryNames) {
+        for (SelenideElement itemName : XInventoryPage.inventoryNames) {
             actualNames.add(itemName.getText());
         }
         List<String> expectedNames = new ArrayList<>(actualNames);
         sort(expectedNames);
-        inventoryPage.inventoryNames.shouldHave(exactTexts(expectedNames));
+        XInventoryPage.inventoryNames.shouldHave(exactTexts(expectedNames));
         // assertEquals("Items have NOT sorted alphabetically", actualNames, expectedNames);
     }
 
     @When("^I choose sort option by name Z-A$")
     public void iChooseSortOptionByNameZA() {
-        inventoryPage.sortDropdown.shouldBe(visible).click();
-        inventoryPage.nameZtoA.shouldBe(visible).click();
+        XInventoryPage.sortDropdown.shouldBe(visible).click();
+        XInventoryPage.nameZtoA.shouldBe(visible).click();
     }
 
     @Then("^all items sorted by name unalphabetically$")
     public void allItemsSortedByNameUnalphabetically() {
         List<String> actualNames = new ArrayList<>();
-        for (SelenideElement itemName : inventoryPage.inventoryNames) {
+        for (SelenideElement itemName : XInventoryPage.inventoryNames) {
             actualNames.add(itemName.getText());
         }
         List<String> expectedNames = new ArrayList<>(actualNames);
@@ -99,14 +99,14 @@ public class InventorySteps extends BaseSteps {
 
     @When("^I choose sort option by price from low to high$")
     public void iChooseSortOptionByPriceFromLowToHigh() {
-        inventoryPage.sortDropdown.shouldBe(visible).click();
-        inventoryPage.priceLowToHigh.shouldBe(visible).click();
+        XInventoryPage.sortDropdown.shouldBe(visible).click();
+        XInventoryPage.priceLowToHigh.shouldBe(visible).click();
     }
 
     @Then("^all items sorted by price from low to high$")
     public void allItemsSortedByPriceFromLowToHigh() {
         List<Double> actualPrices = new ArrayList<>();
-        for (SelenideElement itemPrice :inventoryPage.inventoryPrices) {
+        for (SelenideElement itemPrice : XInventoryPage.inventoryPrices) {
             actualPrices.add(parseDouble(itemPrice.getText().substring(1)));
         }
         List<Double> expectedPrices = new ArrayList<>(actualPrices);
@@ -118,7 +118,7 @@ public class InventorySteps extends BaseSteps {
     @When("^I push the (\\d+)-th \"([^\"]*)\" button$")
     public void iPushTheThButton(int arg0, String arg1) throws Throwable {
         List<Double> actualItems = new ArrayList<>();
-        inventoryPage.inventoryItems.shouldBe().first().click();
+        XInventoryPage.inventoryItems.shouldBe().first().click();
 
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
@@ -126,7 +126,7 @@ public class InventorySteps extends BaseSteps {
 
     @When("^I push the button shopping_cart_link$")
     public void iPushTheButtonShopping_cart_link() {
-        inventoryPage.buttonShoppingCartLink.shouldBe(visible, Duration.ofSeconds(10)).click();
+        XInventoryPage.buttonShoppingCartLink.shouldBe(visible, Duration.ofSeconds(10)).click();
     }
 
     @Then("^I open Your_Cart_Link page$")

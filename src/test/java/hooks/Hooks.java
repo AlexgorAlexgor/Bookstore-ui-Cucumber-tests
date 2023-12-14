@@ -10,12 +10,18 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class Hooks {
     String BASE_URL = "https://www.saucedemo.com/";
-    String BASE_URL_ = "https://www.saucedemo.com/";
+    final static String BASE_URI_USERS = "https://demoqa.com/Account/v1";
+    final static String BASE_URI_BOOKS = "https://demoqa.com/BookStore/v1";
+    final static String BASE_URL_USERS = "https://demoqa.com/profile";
+    final static String BASE_URL_BOOKS = "https://demoqa.com/books";
+    final static String BASE_URL_LOGIN = "https://demoqa.com/login";
+
 
     @Before
     public void setUp(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open(BASE_URL);
+        open(BASE_URL_BOOKS);
     }
     @After
     public void tearDown(){

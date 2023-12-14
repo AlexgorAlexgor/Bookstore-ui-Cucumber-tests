@@ -11,7 +11,7 @@ import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class LoginSteps extends BaseSteps{
+public class XLoginSteps extends BaseSteps{
 
     @Given("^I open Login page$")
     public void iOpenLoginPage() {
