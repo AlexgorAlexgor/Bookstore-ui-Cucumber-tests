@@ -10,10 +10,11 @@ public class ProfilePage {
    // final static String BASE_URL_USERS = "https://demoqa.com/profile";
 
     public static SelenideElement alarmMessageUserName= $(byText("User Name :"));
+    public static SelenideElement logoutButton= $(byText("Log out"));
 
    /* public SelenideElement usernameInputField = $(byId("user-name"));
     public SelenideElement passwordInputField = $(byId("password"));
-    public SelenideElement loginButton = $(byId("login-button"));
+    public SelenideElement loginButtonByLoginForm = $(byId("login-button"));
 
     public SelenideElement alarmMessageUserName= $(byText("Sorry, this user has been locked out."));
 

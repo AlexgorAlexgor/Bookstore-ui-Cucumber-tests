@@ -4,8 +4,7 @@ import pages.*;
 
 public class BaseSteps {
    /* XLoginPage XLoginPage = new XLoginPage();
-    XInventoryPage XInventoryPage = new XInventoryPage();
-    XYourCartPage XYourCartPage =new XYourCartPage();*/
+    XInventoryPage XInventoryPage = new XInventoryPage();*/
 
     BookStorePage bookStorePage =new BookStorePage();
     ProfilePage profilePage =new ProfilePage();
