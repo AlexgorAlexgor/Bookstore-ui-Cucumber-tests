@@ -1,9 +1,9 @@
-Feature:
+@UserLoginLogoutRegister
+Feature: UserLoginLogoutRegister
   Background:
     Given I open Bookstore page
     When I push the Login button on Bookstore page
     Then  I am on the page with Login-form
- #   Given I open "Profile" page
 
   Scenario: Success login with valid data
     When I input "alexgor@gmx.de" to username field

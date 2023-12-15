@@ -72,8 +72,7 @@ public class XInventorySteps extends BaseSteps {
     public void allItemsSortedByNameAlphabetically() {
         List<String> actualNames = new ArrayList<>();
         for (SelenideElement itemName : XInventoryPage.inventoryNames) {
-            actualNames.add(itemName.getText());
-        }
+            actualNames.add(itemName.getText()); }
         List<String> expectedNames = new ArrayList<>(actualNames);
         sort(expectedNames);
         XInventoryPage.inventoryNames.shouldHave(exactTexts(expectedNames));

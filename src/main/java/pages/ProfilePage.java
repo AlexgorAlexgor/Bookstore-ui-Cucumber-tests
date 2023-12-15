@@ -1,9 +1,11 @@
 package pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class ProfilePage {
 
@@ -12,13 +14,13 @@ public class ProfilePage {
     public static SelenideElement alarmMessageUserName= $(byText("User Name :"));
     public static SelenideElement logoutButton= $(byText("Log out"));
 
-   /* public SelenideElement usernameInputField = $(byId("user-name"));
-    public SelenideElement passwordInputField = $(byId("password"));
-    public SelenideElement loginButtonByLoginForm = $(byId("login-button"));
+    public static SelenideElement headerTitleOnProfilePage = $(byText("Title"));
+    public static SelenideElement headerAuthorOnProfilePage = $(byText("Author"));
+    public static SelenideElement headerPublisherOnProfilePage = $(byText("Publisher"));
 
-    public SelenideElement alarmMessageUserName= $(byText("Sorry, this user has been locked out."));
+    public static ElementsCollection colummnTitleOnProfilePage = $$(byId("see-book"));
+    public static ElementsCollection colummnAuthorOnProfilePage = $$(byXpath("//div[@class='rt-td'][3]"));
+    public static ElementsCollection colummnPublisherOnProfilePage = $$(byXpath("//div[@class='rt-td'][4]"));
 
-    public SelenideElement alarmMessageInvalidData= $(byText("Username and password do not match any user in this service"));
-*/
 
 }

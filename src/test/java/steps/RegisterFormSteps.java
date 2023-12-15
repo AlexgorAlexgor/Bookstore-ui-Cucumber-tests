@@ -8,7 +8,7 @@ import pages.RegisterForm;
 
 import static com.codeborne.selenide.Condition.visible;
 
-public class RegisterFormSteps {
+public class RegisterFormSteps extends BaseSteps{
 
     //    Then I am on the page with Register-form
     @Then("^I am on the page with Register-form$")
