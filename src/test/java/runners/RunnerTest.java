@@ -11,10 +11,12 @@ import org.junit.runner.RunWith;
         //tags= "@inventory"
       // tags = "@locked_out_user"
       // tags = "@login"
-        tags = {"@UserLoginLogoutRegister",
-                "@BookStorePageTests",
-                "@ProfilePageTests"}
-        // tags= "@success_login_with_valid_date"
+       // ,
+        //tags = {"@UserLoginLogoutRegister",
+        //        //                "@BookStorePageTests",}
+
+         tags=
+                       "@ProfilePageTests"
        // tags ="@invalid_password"
         // tags ="@invalid_username"
        // tags= "@invalid_data"
